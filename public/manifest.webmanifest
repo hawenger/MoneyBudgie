@@ -1,0 +1,25 @@
+{
+    "name": "Money Budgie",
+    "short_name": "Money Budgie",
+    "description": "Don't let your money fly away; take FLIGHT with your money",
+    "display": "standalone",
+    "icons": [{
+            "src": "icons/icon-169x169.png",
+            "sizes": "169x169",
+            "type": "image/png"
+        },
+
+        {
+            "src": "icons/icon-452x452.png",
+            "sizes": "452x452",
+            "type": "image/png"
+        }
+
+    ],
+    "theme_color": "#9cafb7",
+    "background_color": "#9cafb7",
+    "start_url": "/",
+    "categories": ["finance", "budget", "self-improvement"],
+    "lang": "en-US",
+    "orientation": "any"
+}
