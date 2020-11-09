@@ -10,7 +10,6 @@ const compression = require("compression");
 
 const PORT = 3000;
 
-const Transaction = require("./models/transaction.js");
 const app = express();
 
 app.use(logger("dev"));
