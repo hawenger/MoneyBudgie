@@ -1,6 +1,17 @@
 const router = require("express").Router();
 const Transaction = require("../models/transaction.js");
 
+router.post("/api/transaction", (req, res) => {
+  let myData = new Transaction(req.body);
+  myData.save()
+  .then(item => {
+  res.send("item saved to database");
+  })
+  .catch(err => {
+  res.status(400).send("unable to save to database");
+  });
+ });
+
 router.post("/api/transaction", ({body}, res) => {
   Transaction.create(body)
     .then(dbTransaction => {
