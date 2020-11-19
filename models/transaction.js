@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-//mongoose.connect("mongodb+srv://hawenger:waffles@pinkwizard.nje1c.mongodb.net/budgetDB", { useNewUrlParser: true }, { useUnifiedTopology: true });
+
 mongoose.connect(
   process.env.MONGODB_URI || 'mongodb://localhost/budgetDB',
   {
@@ -9,14 +9,6 @@ mongoose.connect(
     useFindAndModify: false
   }
 );
-
-
-//const newSchema = new mongoose.Schema ({
-//  name: String,
-//  rating: Number,
-//  review: String
-//});
-//const Fruit = mongoose.model("Fruit", newSchema);
 
 const transactionSchema = new mongoose.Schema(
   {
