@@ -1,5 +1,15 @@
 const mongoose = require("mongoose");
-mongoose.connect("mongodb+srv://hawenger:waffles@pinkwizard.nje1c.mongodb.net/budgetDB", { useNewUrlParser: true }, { useUnifiedTopology: true });
+//mongoose.connect("mongodb+srv://hawenger:waffles@pinkwizard.nje1c.mongodb.net/budgetDB", { useNewUrlParser: true }, { useUnifiedTopology: true });
+mongoose.connect(
+  process.env.MONGODB_URI || 'mongodb://localhost/budgetDB',
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false
+  }
+);
+
 
 //const newSchema = new mongoose.Schema ({
 //  name: String,

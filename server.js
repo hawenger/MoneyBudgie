@@ -3,8 +3,17 @@ const logger = require("morgan");
 const compression = require("compression");
 
 const mongoose = require("mongoose");
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/BudgetDB');
+//mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/BudgetDB');
 //{ useUnifiedTopology: true }, {, { useFindAndModify: true })
+mongoose.connect(
+  process.env.MONGODB_URI || 'mongodb://localhost/budgetDB',
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false
+  }
+);
 
 const PORT = 3000;
 
