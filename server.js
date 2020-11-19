@@ -12,10 +12,7 @@ mongoose.connect(
     useCreateIndex: true,
     useFindAndModify: false
   }
-)
-.catch(error => {
-  console.log(error);
-});
+);
 
 
 const app = express();
