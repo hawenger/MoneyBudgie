@@ -2,7 +2,8 @@ const express = require("express");
 const logger = require("morgan");
 const compression = require("compression");
 
-
+const mongoose = require("mongoose");
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/BudgetDB');
 //{ useUnifiedTopology: true }, {, { useFindAndModify: true })
 
 const PORT = 3000;
